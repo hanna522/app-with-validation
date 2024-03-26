@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Validation</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>App with Validation</h1>
+        </header>
+        <main>
+            <form>
+                <label for="name-input">Name
+                    <input type="text" minlength="3" id="name-input" required>
+                </label>
+                <div class="error" id="name-error"></div>
+                <label for="year-input">Year of birth
+                    <input type="number" id="year-input" required>
+                </label>
+                <div class="error" id="year-error"></div>
+                <label for="us-input">Do you live in the United States?
+                    <input type="checkbox" id="us-input">
+                </label>
+                <div class="error" id="us-error"></div>
+                <label for="zipcode-input">Zipcode
+                    <input type="number" id="zipcode-input">
+                </label>
+                <div class="error" id="zipcode-error"></div>
+                <label for="password-input">Password
+                    <input type="password" id="password-input" required>
+                </label>
+                <div class="error" id="password-error"></div>
+                <label for="pizza-input">Preferred type of pizza
+                    <select id="pizza-input" required>
+                        <option value="" selected disabled>Choose the option</option>
+                        <option value="w-pineapple">With pineapple</option>
+                        <option value="wo-pineapple">Without pineapple</option>
+                        <option value="no-pizza">I do not like pizza</option>
+                    </select>
+                </label>
+                <div class="error" id="pizza-error"></div>
+            </form>
+            <button type="submit" id="submit-btn">Submit</button>
+            <div class="result"></div>
+        </main>
+    </body>
+</html>
