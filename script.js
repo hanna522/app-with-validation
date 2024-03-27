@@ -56,7 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
         } if (!year || year < 1990 || year > 2100) {
             outputError('Year of birth must be an integer number greater than 1900 and smaller than 2100', 'year-error')
             hasError = true;
-        } if (us && (!zipcode || zipcode.length !== 5 || isNaN(Number(zipcode)))) {
+        } if (zipcode && (zipcode.length !== 5 || isNaN(Number(zipcode)))) {
+            outputError("Zipcode must be a positive number with 5 digits", 'zipcode-error');
+            hasError = true;
+        } if (us && !zipcode) {
             outputError("Zipcode must be a positive number with 5 digits", 'zipcode-error');
             hasError = true;
         } if (!password || password.length < 8) {
