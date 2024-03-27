@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!name || name.length < 3) {
             outputError("Name must be at least 3 characters long", 'name-error');
             hasError = true;
-        } if (!year || year < 1990 || year > 2100) {
+        } if (!year || year < 1900 || year > 2100) {
             outputError('Year of birth must be an integer number greater than 1900 and smaller than 2100', 'year-error')
             hasError = true;
         } if (zipcode && (zipcode.length !== 5 || isNaN(Number(zipcode)))) {
